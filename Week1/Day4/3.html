@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" maxlength="10">
+
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <br><br>
+
+        <label for="language">Preferred Programming Language:</label>
+        <input
+            type="text"
+            id="language"
+            name="language"
+            list="languages"
+        >
+
+        <datalist id="languages">
+            <option value="JavaScript">
+            <option value="Python">
+            <option value="Java">
+            <option value="C++">
+            <option value="C">
+        </datalist>
+
+        <br><br>
+
+        <label for="experience">
+            Experience (0 Years)
+        </label>
+
+        <input
+            type="range"
+            id="experience"
+            name="experience"
+            min="0"
+            max="10"
+            value="0"
+        >
+
+        <br><br>
+
+        <label for="source">
+            How did you hear about us?
+        </label>
+
+        <select id="source" name="source">
+            <option value="" disabled selected>Select an option</option>
+            <option>Google Search</option>
+            <option>YouTube</option>
+            <option>LinkedIn</option>
+            <option>Friend Referral</option>
+            <option>Instagram</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables Assignment</title>
+</head>
+
+<body>
+
+    <h1>Tables Assignment</h1>
+
+    <!-- Student Marks Table -->
+    <h2>Student Marks Table</h2>
+
+    <table border="1">
+        <caption>Student Marks Table</caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Marks</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Sumit</td>
+                <td>HTML</td>
+                <td>90</td>
+            </tr>
+
+            <tr>
+                <td>Rahul</td>
+                <td>CSS</td>
+                <td>85</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">Average Marks</td>
+                <td>87.5</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br><br>
+
+    <!-- Colspan Table -->
+    <h2>Lunch Break Table (Colspan Example)</h2>
+
+    <table border="1">
+        <caption>Lunch Break Example</caption>
+
+        <tr>
+            <th scope="col">10:00 - 11:00</th>
+            <th scope="col">11:00 - 12:00</th>
+            <th scope="col">12:00 - 1:00</th>
+        </tr>
+
+        <tr>
+            <td colspan="3" align="center">Lunch Break</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <!-- Rowspan Table -->
+    <h2>Frontend / Backend Schedule (Rowspan Example)</h2>
+
+    <table border="1">
+        <caption>Frontend and Backend Weekly Schedule</caption>
+
+        <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Week</th>
+        </tr>
+
+        <tr>
+            <td rowspan="3">Frontend</td>
+            <td>Week 1 - HTML</td>
+        </tr>
+
+        <tr>
+            <td>Week 2 - CSS</td>
+        </tr>
+
+        <tr>
+            <td>Week 3 - JavaScript</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Backend</td>
+            <td>Week 4 - Node.js</td>
+        </tr>
+
+        <tr>
+            <td>Week 5 - MongoDB</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

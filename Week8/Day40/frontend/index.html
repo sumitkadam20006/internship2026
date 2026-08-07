@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JWT Authentication</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>JWT Authentication Demo</h1>
+
+<div class="box">
+
+<input
+id="name"
+placeholder="Name">
+
+<input
+id="email"
+placeholder="Email">
+
+<input
+id="password"
+type="password"
+placeholder="Password">
+
+<button onclick="registerUser()">
+Register
+</button>
+
+<button onclick="loginUser()">
+Login
+</button>
+
+<button onclick="profile()">
+Get Profile
+</button>
+
+</div>
+
+<h3>Your Token</h3>
+
+<textarea id="token" rows="6"></textarea>
+
+<pre id="result"></pre>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

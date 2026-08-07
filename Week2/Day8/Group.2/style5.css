@@ -1,0 +1,24 @@
+.offer-hero{
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+color:white;
+padding:100px 20px;
+text-align:center;
+}
+
+.offer-card{
+border:none;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.offer-card:hover{
+transform:translateY(-8px);
+}
+
+.promo-banner{
+background:linear-gradient(135deg,#f59e0b,#ef4444);
+color:white;
+padding:60px;
+border-radius:20px;
+}

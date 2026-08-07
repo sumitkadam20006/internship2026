@@ -1,0 +1,17 @@
+.table{
+border-radius:15px;
+overflow:hidden;
+}
+
+.card{
+border-radius:20px;
+}
+
+.btn-primary{
+background:#2563eb;
+border:none;
+}
+
+.btn-primary:hover{
+background:#1d4ed8;
+}

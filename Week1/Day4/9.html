@@ -1,0 +1,32 @@
+<!--
+HTML Table Accessibility Best Practices
+
+1. Use <caption> to describe the table.
+2. Use <th> for header cells instead of styling <td>.
+3. Use scope attributes on header cells.
+4. Keep table structure simple and meaningful.
+
+The scope attribute tells screen readers which cells a header applies to.
+
+scope="col"
+Header applies to all cells in that column.
+
+scope="row"
+Header applies to all cells in that row.
+
+Example:
+
+<table border="1">
+    <caption>Student Marks</caption>
+
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Marks</th>
+    </tr>
+
+    <tr>
+        <th scope="row">Sumit</th>
+        <td>90</td>
+    </tr>
+</table>
+-->
