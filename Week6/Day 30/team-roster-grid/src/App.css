@@ -1,0 +1,25 @@
+body{
+
+    background:#f3f3f3;
+    font-family:Arial;
+
+}
+
+h1{
+
+    text-align:center;
+    margin:20px;
+
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    padding:20px;
+
+}

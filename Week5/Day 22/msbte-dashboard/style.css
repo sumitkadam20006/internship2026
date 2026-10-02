@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    padding:30px;
+    text-align:center;
+}
+
+h2{
+    margin-bottom:20px;
+    color:#003366;
+}
+
+.search-box{
+    margin-bottom:25px;
+}
+
+input{
+    width:220px;
+    padding:10px;
+    border:1px solid #999;
+    border-radius:4px;
+}
+
+button{
+    padding:10px 18px;
+    background:#1565c0;
+    color:white;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0d47a1;
+}
+
+.dashboard{
+    width:720px;
+    margin:auto;
+    border:2px solid #333;
+    background:#fff;
+}
+
+.header{
+    background:#d9ecff;
+    padding:12px;
+    border-bottom:2px solid #333;
+}
+
+.header h2{
+    margin:0;
+    color:#003366;
+}
+
+.content{
+    display:grid;
+    grid-template-columns:1fr 2fr 1fr;
+    min-height:260px;
+}
+
+.courses{
+    background:#fff3cd;
+    border-right:2px solid #333;
+    padding:15px;
+}
+
+.welcome{
+    background:#eaf7ff;
+    border-right:2px solid #333;
+    padding:15px;
+}
+
+.announcements{
+    background:#fff3cd;
+    padding:15px;
+}
+
+.courses h3,
+.welcome h3,
+.announcements h3{
+    color:#003366;
+    margin-bottom:15px;
+    border-bottom:1px solid #999;
+    padding-bottom:8px;
+}
+
+ul{
+    list-style:none;
+    text-align:left;
+}
+
+li{
+    padding:8px 0;
+    border-bottom:1px solid #ddd;
+}
+
+#studentName{
+    margin-top:15px;
+    color:#1565c0;
+    font-size:28px;
+}
+
+.welcome p{
+    margin-top:20px;
+    color:#444;
+}
+
+@media(max-width:768px){
+
+    .dashboard{
+        width:100%;
+    }
+
+    .content{
+        grid-template-columns:1fr;
+    }
+
+    .courses,
+    .welcome,
+    .announcements{
+        border-right:none;
+        border-bottom:2px solid #333;
+    }
+
+    .announcements{
+        border-bottom:none;
+    }
+}

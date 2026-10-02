@@ -1,0 +1,38 @@
+.card{
+
+    width:250px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+    text-align:center;
+
+}
+
+.avatar{
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    background:blue;
+    color:white;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:25px;
+
+}
+
+.card button{
+
+    margin-top:10px;
+    padding:8px 15px;
+    cursor:pointer;
+
+}

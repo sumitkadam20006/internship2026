@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    #student-card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 250px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    #student-card.highlight-card {
+      background-color: #f0f8ff;
+      border-color: #007acc;
+    }
+    #toggle-highlight-btn {
+      margin-top: 15px;
+      padding: 8px 12px;
+      cursor: pointer;
+      border: none;
+      background-color: #007acc;
+      color: white;
+      border-radius: 4px;
+    }
+    #toggle-highlight-btn:hover {
+      background-color: #005f99;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Information</h1>
+  
+  <div id="student-card">
+    <h2 id="student-name"></h2>
+    <p id="student-course"></p>
+    <p id="student-batch"></p>
+  </div>
+  
+  <button id="toggle-highlight-btn">Toggle Highlight</button>
+  
+  <script src="hw.js"></script>
+</body>
+</html>

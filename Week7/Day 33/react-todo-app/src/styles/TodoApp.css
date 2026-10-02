@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fcf3e7;
+  background-image: radial-gradient(circle at 25% 0, #fdf6ed 0%, #f4e4d0 100%);
+  min-height: 100vh;
+  font-family: 'Gabarito', system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+#root {
+  width: 100%;
+  max-width: 640px;
+}
+
+/* ---- card ---- */
+.todo-container {
+  background: #fff9f0;
+  border-radius: 28px;
+  padding: 36px 32px 40px;
+  box-shadow: 0 2px 0 #dcc9b2, 0 12px 32px -8px rgba(120, 70, 30, 0.2);
+  border: 1px solid #eadbc8;
+}
+
+.todo-container h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3a2416;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.todo-container h1::after {
+  content: '✦';
+  display: block;
+  font-size: 14px;
+  color: #c9a77b;
+  margin-top: 2px;
+  letter-spacing: 0;
+}
+
+/* ---- form ---- */
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin: 24px 0 28px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 13px 18px;
+  border: 2px solid #e6d5be;
+  border-radius: 14px;
+  background: #fdfaf5;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  color: #2d1b0e;
+  transition: border-color .2s;
+}
+.todo-form input:focus {
+  border-color: #bfa386;
+}
+.todo-form input::placeholder {
+  color: #cbb7a0;
+}
+
+.todo-form button {
+  background: #3a2416;
+  color: #f7ede1;
+  border: none;
+  border-radius: 14px;
+  padding: 13px 28px;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background .15s, transform .1s;
+  white-space: nowrap;
+}
+.todo-form button:hover {
+  background: #543a28;
+}
+.todo-form button:active {
+  transform: scale(.96);
+}
+
+/* ---- filters ---- */
+.filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filters button {
+  padding: 7px 18px;
+  border: 2px solid #e6d5be;
+  border-radius: 100px;
+  background: transparent;
+  color: #6f5540;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all .15s;
+}
+.filters button:hover {
+  border-color: #bfa386;
+  color: #3a2416;
+  background: #f7ede1;
+}
+.filters button:disabled {
+  background: #3a2416;
+  border-color: #3a2416;
+  color: #f7ede1;
+}
+
+/* ---- todo items ---- */
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fdfaf5;
+  border: 1px solid #eadbc8;
+  border-radius: 16px;
+  padding: 12px 16px 12px 14px;
+  transition: box-shadow .15s, border-color .15s;
+}
+.todo-item:hover {
+  border-color: #dcc9b2;
+  box-shadow: 0 4px 0 #eadbc8;
+}
+
+.todo-item span {
+  flex: 1;
+  font-size: 15px;
+  color: #2d1b0e;
+  line-height: 1.5;
+  padding: 2px 0;
+  word-break: break-word;
+}
+
+/* checkbox — custom look */
+.todo-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #dcc9b2;
+  border-radius: 7px;
+  background: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s, border-color .15s;
+}
+.todo-item input[type="checkbox"]:checked {
+  background: #3a2416;
+  border-color: #3a2416;
+}
+.todo-item input[type="checkbox"]:checked::after {
+  content: '✓';
+  font-size: 15px;
+  color: #f7ede1;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: #baa48d;
+}
+
+/* ---- delete btn ---- */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #dcc9b2;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all .15s;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.delete-btn:hover {
+  color: #c2554a;
+  background: rgba(194, 85, 74, .08);
+}
+
+/* ---- empty state ---- */
+.todo-list:empty::after {
+  content: 'list is looking empty...';
+  display: block;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 22px;
+  color: #cbb7a0;
+  text-align: center;
+  padding: 36px 20px 20px;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 540px) {
+  .todo-container { padding: 28px 20px 32px; }
+  .todo-form { flex-direction: column; }
+  .todo-form button { width: 100%; }
+  .todo-container h1 { font-size: 24px; }
+}

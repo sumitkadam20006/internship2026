@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+}
+
+header{
+    background:#1565c0;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+header p{
+    margin-top:10px;
+}
+
+.search-section{
+    text-align:center;
+    margin:30px;
+}
+
+.search-section input{
+    width:280px;
+    padding:10px;
+    font-size:16px;
+    border:1px solid #999;
+    border-radius:5px;
+}
+
+.search-section button{
+    padding:10px 20px;
+    margin-left:10px;
+    background:#1565c0;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.search-section button:hover{
+    background:#0d47a1;
+}
+
+.result-section{
+    width:500px;
+    margin:30px auto;
+}
+
+#countryCard{
+    display:none;
+    background:white;
+    border:2px solid #1565c0;
+    border-radius:8px;
+    padding:20px;
+}
+
+#countryCard h2{
+    text-align:center;
+    color:#1565c0;
+    margin-bottom:20px;
+}
+
+#countryCard p{
+    font-size:18px;
+    margin:15px 0;
+}
+
+#loading{
+    text-align:center;
+    color:green;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+#error{
+    text-align:center;
+    color:red;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+footer{
+    background:#1565c0;
+    color:white;
+    text-align:center;
+    padding:15px;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+@media(max-width:600px){
+
+    .result-section{
+        width:90%;
+    }
+
+    .search-section input{
+        width:90%;
+        margin-bottom:10px;
+    }
+
+    .search-section button{
+        margin-left:0;
+        width:90%;
+    }
+
+}

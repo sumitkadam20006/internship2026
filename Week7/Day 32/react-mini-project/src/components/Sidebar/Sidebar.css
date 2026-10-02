@@ -1,0 +1,164 @@
+.sidebar {
+  width: 280px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #6C63FF, #4F46E5);
+  color: white;
+  padding: 30px;
+  flex-shrink: 0;
+  transition: width 0.3s ease, padding 0.3s ease;
+}
+
+.logo {
+  margin-bottom: 50px;
+  transition: margin 0.3s ease;
+}
+
+.logo h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  transition: font-size 0.3s ease;
+}
+
+.logo p {
+  color: #ddd;
+  transition: opacity 0.3s ease;
+}
+
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0.65;
+  transition: 0.3s;
+}
+
+.circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.active {
+  opacity: 1;
+}
+
+.active .circle {
+  background: white;
+  color: #4F46E5;
+}
+
+.step span {
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 90px;
+    padding: 24px 16px;
+  }
+
+  .logo {
+    margin-bottom: 32px;
+  }
+
+  .logo h2 {
+    font-size: 20px;
+  }
+
+  .logo p {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .step {
+    gap: 0;
+    justify-content: center;
+  }
+
+  .step span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: flex;
+    width: 100%;
+    min-height: auto;
+    padding: 16px 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 0;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo h2 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .logo p {
+    opacity: 1;
+    height: auto;
+    margin: 0;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .step-list {
+    flex-direction: row;
+    gap: 10px;
+    flex: 1;
+    overflow-x: auto;
+    padding: 4px 0;
+  }
+
+  .step {
+    gap: 6px;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
+  .step span {
+    display: block;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .circle {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,12 @@
+GET /
+GET /tasks
+GET /tasks?done=true
+GET /tasks?priority=high
+GET /tasks/1
+POST /tasks
+POST /tasks
+POST /tasks
+PUT /tasks/1
+DELETE /tasks/2
+GET /tasks/secret
+GET /error

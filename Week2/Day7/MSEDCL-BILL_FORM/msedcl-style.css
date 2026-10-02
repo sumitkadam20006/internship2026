@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    padding: 12px 30px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.company-name {
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    margin-left: 15px;
+    flex: 1;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 8px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 4px;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: #0144a9;
+    background-color: rgb(0, 251, 255);
+    
+
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.login-btn:hover {
+    background-color: #e5e7eb;
+}
+
+/* Hero main stylee */
+
+.hero {
+    background-image: url("https://images.indianexpress.com/2021/10/msedcl.jpg?w=1600");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color:rgb(0, 0, 0);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color:rgb(0,0,0);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-btn {
+    text-decoration: none;
+    background: white;
+    color: #0144a9;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero-btn.secondary {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.services {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.services h2{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0144a9
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    background: #f4f4f4;
+}
+
+.card h3 {
+    color: #0144a9;
+    margin-bottom: 10px;
+}

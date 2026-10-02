@@ -1,0 +1,450 @@
+/* ===========================
+   CSS RESET & BASE STYLES
+   =========================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #f0f2f5;
+    color: #1a1a2e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+
+header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #ffffff;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.3rem;
+}
+
+.header-content p {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+/* ===========================
+   CONTAINER & CARDS
+   =========================== */
+
+.container {
+    max-width: 900px;
+    width: 95%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06),
+                0 8px 30px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08),
+                0 12px 36px rgba(0, 0, 0, 0.05);
+}
+
+/* ===========================
+   FORM
+   =========================== */
+
+.form-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: #16213e;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #0f3460;
+    box-shadow: 0 0 0 3px rgba(15, 52, 96, 0.12);
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+}
+
+/* ===========================
+   BUTTONS
+   =========================== */
+
+.btn {
+    padding: 0.65rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.15s ease, box-shadow 0.25s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0f3460, #16213e);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(15, 52, 96, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 18px rgba(15, 52, 96, 0.4);
+}
+
+.btn-secondary {
+    background: #f0f0f5;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+    background: #e4e4ea;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e94560, #ba2d45);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(233, 69, 96, 0.25);
+    font-size: 0.82rem;
+    padding: 0.45rem 0.85rem;
+}
+
+.btn-danger:hover {
+    box-shadow: 0 6px 16px rgba(233, 69, 96, 0.35);
+}
+
+.btn-edit {
+    background: linear-gradient(135deg, #0f3460, #1a1a6e);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(15, 52, 96, 0.22);
+    font-size: 0.82rem;
+    padding: 0.45rem 0.85rem;
+}
+
+.btn-edit:hover {
+    box-shadow: 0 6px 16px rgba(15, 52, 96, 0.32);
+}
+
+/* ===========================
+   TOOLBAR (Search + Sort)
+   =========================== */
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.6rem 0.85rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.search-box input:focus {
+    border-color: #0f3460;
+    box-shadow: 0 0 0 3px rgba(15, 52, 96, 0.12);
+}
+
+.sort-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sort-box label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #555;
+    white-space: nowrap;
+}
+
+.sort-box select {
+    padding: 0.6rem 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.25s ease;
+}
+
+.sort-box select:focus {
+    border-color: #0f3460;
+}
+
+/* ===========================
+   TABLE
+   =========================== */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+thead tr {
+    background: #f5f6fa;
+}
+
+thead th {
+    padding: 0.75rem 0.85rem;
+    text-align: left;
+    font-weight: 700;
+    color: #1a1a2e;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+tbody td {
+    padding: 0.7rem 0.85rem;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    vertical-align: middle;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f8f9ff;
+}
+
+/* Marks badge — a subtle highlight */
+tbody td:nth-child(3) {
+    font-weight: 600;
+}
+
+/* Action buttons in a row */
+.action-btns {
+    display: flex;
+    gap: 0.4rem;
+}
+
+/* ===========================
+   LOADING SPINNER
+   =========================== */
+
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 2rem 0;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 4px solid #e0e0e0;
+    border-top-color: #0f3460;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-spinner p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   EMPTY STATE
+   =========================== */
+
+.empty-state {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: #888;
+}
+
+.empty-state p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.empty-state span {
+    font-size: 0.85rem;
+}
+
+/* ===========================
+   NOTIFICATIONS (Toasts)
+   =========================== */
+
+.notification-container {
+    position: fixed;
+    top: 1.2rem;
+    right: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    z-index: 1000;
+    max-width: 350px;
+}
+
+.toast {
+    padding: 0.85rem 1.1rem;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+    animation: slideIn 0.35s ease, fadeOut 0.4s ease 2.8s forwards;
+    line-height: 1.4;
+}
+
+.toast-success {
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+}
+
+.toast-error {
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; transform: translateX(20px); }
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: #999;
+    font-size: 0.8rem;
+    margin-top: auto;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 600px) {
+    header {
+        padding: 1.8rem 0.8rem;
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 1.2rem;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sort-box {
+        justify-content: flex-start;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+        display: none; /* Hide ID column on narrow screens */
+    }
+
+    .btn {
+        padding: 0.55rem 1.1rem;
+        font-size: 0.8rem;
+    }
+}

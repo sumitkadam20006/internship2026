@@ -1,0 +1,5 @@
+const student = {name: "Atharv", batch: 2026, course: "MERN", city: "Pune"};
+
+const {name, ...otherDetails} = student;
+console.log(name);
+console.log(otherDetails);

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+
+        <h1>🌍 Country Explorer</h1>
+
+        <p>Search any country to view its details</p>
+
+    </header>
+
+    <main>
+
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="countryInput"
+                placeholder="Enter Country Name"
+            >
+
+            <button onclick="searchCountry()">
+                Search
+            </button>
+
+        </section>
+
+        <section class="result-section">
+
+            <p id="loading"></p>
+
+            <div id="countryCard">
+
+                <h2 id="countryName"></h2>
+
+                <p>
+                    <strong>Capital :</strong>
+                    <span id="capital"></span>
+                </p>
+
+                <p>
+                    <strong>Region :</strong>
+                    <span id="region"></span>
+                </p>
+
+            </div>
+
+            <p id="error"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2025 Country Explorer | HTML • CSS • JavaScript</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

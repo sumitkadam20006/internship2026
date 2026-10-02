@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSBTE Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Student Dashboard</h2>
+
+    <div class="search-box">
+        <input type="number" id="studentId" placeholder="Enter Student ID">
+        <button onclick="loadDashboard()">Fetch Details</button>
+    </div>
+
+    <div id="dashboard" class="dashboard">
+
+        <div class="header">
+            <h2>MSBTE</h2>
+        </div>
+
+        <div class="content">
+
+            <div class="courses">
+                <h3>Courses</h3>
+                <ul id="courseList"></ul>
+            </div>
+
+            <div class="welcome">
+                <h3 id="studentName">Welcome!</h3>
+            </div>
+
+            <div class="announcements">
+                <h3>Announcements</h3>
+                <ul id="announcementList"></ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+.rating{
+
+    text-align:center;
+
+    margin-top:100px;
+
+}
+
+span{
+
+    font-size:60px;
+
+    cursor:pointer;
+
+    margin:5px;
+
+    transition:.2s;
+
+}
+
+.filled{
+
+    color:gold;
+
+}
+
+.empty{
+
+    color:lightgray;
+
+}
+
+span:hover{
+
+    transform:scale(1.2);
+
+}

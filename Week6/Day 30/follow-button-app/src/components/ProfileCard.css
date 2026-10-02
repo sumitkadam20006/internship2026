@@ -1,0 +1,57 @@
+.card{
+
+    width:260px;
+
+    padding:20px;
+
+    margin:20px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    background:rgb(0, 0, 0);
+
+    box-shadow:0 0 10px gray;
+
+}
+
+.avatar{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#2196f3;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    font-size:25px;
+
+    font-weight:bold;
+
+}
+
+button{
+
+    padding:10px 20px;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}

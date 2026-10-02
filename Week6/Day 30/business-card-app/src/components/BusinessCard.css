@@ -1,0 +1,69 @@
+.card{
+
+    width:300px;
+
+    margin:30px auto;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 0 10px gray;
+
+}
+
+.avatar{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#3498db;
+
+    color:rgb(0, 0, 0);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    font-size:25px;
+
+    font-weight:bold;
+
+}
+
+.light{
+
+    background:rgb(61, 54, 54);
+
+    color:black;
+
+}
+
+.dark{
+
+    background:#222;
+
+    color:white;
+
+}
+
+h2{
+
+    margin-top:15px;
+
+}
+
+p{
+
+    margin:5px;
+
+}

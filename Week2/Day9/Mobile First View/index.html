@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProAzure — Responsive Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="nav-top">
+            <a href="/" class="logo">ProAzure</a>
+
+            <button class="nav-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+        </div>
+
+        <nav aria-label="Primary">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Learn to Build for Every Screen</h1>
+
+            <p>
+                This page is mobile-first: it works perfectly on a
+                320px phone, then grows up to a 27" monitor.
+            </p>
+
+            <a href="#services" class="btn">
+                Explore Services
+            </a>
+
+        </div>
+
+        <div class="hero-media">
+
+            <img
+                src="https://picsum.photos/seed/proazure/900/600"
+                alt="Students collaborating on laptops">
+
+        </div>
+
+    </section>
+
+    <section id="services" class="services">
+
+        <h2>What We Teach</h2>
+
+        <div class="card-grid">
+
+            <article class="card">
+                <h3>HTML & CSS</h3>
+
+                <p>
+                    Semantic markup, Flexbox, Grid,
+                    and responsive layouts.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>JavaScript</h3>
+
+                <p>
+                    DOM manipulation, events,
+                    fetch API, and ES6+.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>React</h3>
+
+                <p>
+                    Components, hooks,
+                    state management, and routing.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Node & MongoDB</h3>
+
+                <p>
+                    REST APIs, authentication,
+                    and database design.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Campus Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://picsum.photos/seed/g1/400/300"
+                alt="Classroom session">
+            <img src="https://picsum.photos/seed/g2/400/300"
+                alt="Student coding">
+            <img src="https://picsum.photos/seed/g3/400/300"
+                alt="Project demo day">
+            <img src="https://picsum.photos/seed/g4/400/300"
+                alt="Team Workshop">
+        </div>
+    </section>
+
+    <footer id="content" class="footer">
+        <p>@2026 ProAzure Software SOlutions,pune</p>
+        <p>hr@proazuresoft.com</p>
+    </footer>
+</body>
+</html>
