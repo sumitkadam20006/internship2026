@@ -14,10 +14,30 @@ const analyticsRoutes = require("./routes/analytics");
 
 const app = express();
 
-app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:5173",
-  credentials: true
-}));
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://internship2026-weld.vercel.app"
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Postman / server-to-server requests
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(
+        new Error("Not allowed by CORS")
+      );
+    },
+    credentials: true
+  })
+);
 app.use(express.json({ limit: "1mb" }));
 
 app.get("/", (req, res) => res.json({ app: "DailyRoutine Pro", status: "ok" }));

@@ -7,6 +7,7 @@ import {
   Menu, UserRound, TrendingUp, ShieldCheck, Smile, Meh, Frown
 } from "lucide-react";
 import api from "./api";
+import { GoogleLogin } from "@react-oauth/google";
 
 const nav = [
   ["/", "Dashboard", LayoutDashboard],
@@ -47,17 +48,45 @@ function App() {
 
 function Auth({ onLogin }) {
   const [mode, setMode] = useState("login");
-  const [form, setForm] = useState({name:"",email:"",password:""});
+  const [form, setForm] = useState({ name: "", email: "", password: "" });
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+
   const submit = async e => {
-    e.preventDefault(); setError(""); setBusy(true);
+    e.preventDefault();
+    setError("");
+    setBusy(true);
+
     try {
       const r = await api.post(`/auth/${mode}`, form);
-      localStorage.setItem("dr_token", r.data.token); onLogin(r.data.user);
-    } catch(e) { setError(e.response?.data?.message || "Something went wrong"); }
-    finally { setBusy(false); }
+      localStorage.setItem("dr_token", r.data.token);
+      onLogin(r.data.user);
+    } catch (e) {
+      setError(e.response?.data?.message || "Something went wrong");
+    } finally {
+      setBusy(false);
+    }
   };
+
+  const handleGoogleSuccess = async credentialResponse => {
+    setError("");
+    setBusy(true);
+
+    try {
+      const r = await api.post("/auth/google", {
+        credential: credentialResponse.credential
+      });
+
+      localStorage.setItem("dr_token", r.data.token);
+      onLogin(r.data.user);
+    } catch (e) {
+      console.error("Google login error:", e);
+      setError(e.response?.data?.message || "Google sign-in failed");
+    } finally {
+      setBusy(false);
+    }
+  };
+
   return <div className="auth-page">
     <div className="auth-glow glow-one"/><div className="auth-glow glow-two"/>
     <div className="auth-card">
@@ -66,12 +95,26 @@ function Auth({ onLogin }) {
       <h1>{mode === "login" ? "Welcome back" : "Build better days"}</h1>
       <p className="muted">{mode === "login" ? "Sign in to continue your routine." : "Plan, track and improve your everyday life."}</p>
       {error && <div className="error-box">{error}</div>}
+
       <form onSubmit={submit} className="stack">
         {mode === "register" && <Field label="Full name" value={form.name} onChange={v=>setForm({...form,name:v})} placeholder="Sumit Kadam" required/>}
         <Field label="Email" type="email" value={form.email} onChange={v=>setForm({...form,email:v})} placeholder="you@example.com" required/>
         <Field label="Password" type="password" value={form.password} onChange={v=>setForm({...form,password:v})} placeholder="Minimum 6 characters" required/>
         <button className="primary big-btn" disabled={busy}>{busy ? "Please wait..." : mode === "login" ? "Sign in →" : "Create account →"}</button>
       </form>
+
+      <div className="google-divider">
+        <span>OR</span>
+      </div>
+
+      <div className="google-login">
+        <GoogleLogin
+          onSuccess={handleGoogleSuccess}
+          onError={() => setError("Google sign-in failed")}
+          useOneTap={false}
+        />
+      </div>
+
       <button className="switch-btn" onClick={()=>{setMode(mode==="login"?"register":"login");setError("")}}>
         {mode === "login" ? "New here? Create an account" : "Already have an account? Sign in"}
       </button>
